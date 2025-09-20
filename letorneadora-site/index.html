@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&E Torneadora - Perfuratrizes Profissionais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#0b0a3b',
+                        'brand-light': '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky-header sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3 animate-fade-in">
+                    <img src="logo.png" alt="L&E Torneadora" class="h-12 w-12 hover-lift">
+                    <div>
+                        <h1 class="text-xl font-bold text-brand-blue">L&E TORNEADORA</h1>
+                        <p class="text-sm text-gray-600">Perfuratrizes Profissionais</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-brand-blue hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 focus-visible">Início</a>
+                    <a href="#produtos" class="text-brand-blue hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 focus-visible">Produtos</a>
+                    <a href="#sobre" class="text-brand-blue hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 focus-visible">Sobre</a>
+                    <a href="#contato" class="text-brand-blue hover:text-blue-600 font-medium transition-all duration-300 hover:scale-105 focus-visible">Contato</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-brand-blue hover:text-blue-600 transition-colors icon-bounce" aria-label="Abrir menu de navegação">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#inicio" class="text-brand-blue hover:text-blue-600 font-medium transition-colors mobile-menu-link">Início</a>
+                    <a href="#produtos" class="text-brand-blue hover:text-blue-600 font-medium transition-colors mobile-menu-link">Produtos</a>
+                    <a href="#sobre" class="text-brand-blue hover:text-blue-600 font-medium transition-colors mobile-menu-link">Sobre</a>
+                    <a href="#contato" class="text-brand-blue hover:text-blue-600 font-medium transition-colors mobile-menu-link">Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-brand text-white py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-10"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
+                Perfuratrizes de <span class="text-gold-gradient">Alta Performance</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+                Equipamentos profissionais para perfuração de poços artesianos com tecnologia avançada e qualidade garantida
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style="animation-delay: 0.4s;">
+                <a href="#produtos" class="btn-secondary px-8 py-4 rounded-lg font-bold text-lg text-white hover:scale-105 transition-all duration-300 focus-visible">
+                    <i class="fas fa-cogs mr-2"></i>Ver Produtos
+                </a>
+                <a href="#contato" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-blue transition-all duration-300 hover:scale-105 focus-visible">
+                    <i class="fas fa-phone mr-2"></i>Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+        <!-- Elementos decorativos -->
+        <div class="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-16 h-16 bg-white rounded-full opacity-10 animate-pulse" style="animation-delay: 1s;"></div>
+    </section>
+
+    <!-- Sobre a Empresa -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Sobre a L&E Torneadora</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Fundada em 2021, a L&E Torneadora é especializada na fabricação de perfuratrizes profissionais para poços artesianos, 
+                    oferecendo equipamentos de alta qualidade com tecnologia avançada.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-2">Tecnologia Avançada</h4>
+                    <p class="text-gray-600">Equipamentos com motor Zmax, bomba hidráulica e painel de controle completo</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-2">Qualidade Garantida</h4>
+                    <p class="text-gray-600">Produtos fabricados com os melhores materiais e rigoroso controle de qualidade</p>
+                </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-md">
+                    <div class="bg-brand-blue text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-blue mb-2">Suporte Completo</h4>
+                    <p class="text-gray-600">Atendimento especializado e condições flexíveis de pagamento</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Nossos Produtos</h3>
+                <p class="text-lg text-gray-600">Perfuratrizes profissionais para diferentes necessidades e profundidades</p>
+            </div>
+
+            <!-- AR-80 (40m) -->
+            <div class="mb-16">
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden hover-lift">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="p-8 lg:p-12">
+                            <div class="flex items-center mb-6">
+                                <span class="bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-bold mr-4">MODELO AR-80</span>
+                                <span class="text-2xl font-bold text-brand-blue">40 Metros</span>
+                            </div>
+                            <h4 class="text-3xl font-bold text-brand-blue mb-4">Perfuratriz AR-80</h4>
+                            <p class="text-gray-600 mb-6 text-lg">
+                                Perfuratriz compacta e eficiente com capacidade para 40 metros de profundidade. 
+                                Ideal para projetos de médio porte com excelente mobilidade.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Motor Zmax a gasolina de alta performance</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Torre de 2.5m com suporte para hastes de 2.3/8"</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Funciona com bomba de lama ou compressor</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Painel completo com manômetros</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Rodas integradas para locomoção</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                                <h5 class="font-bold text-brand-blue mb-4">Preços e Opções:</h5>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span>Equipamento AR-80:</span>
+                                        <span class="font-bold">R$ 45.000,00</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span>Haste 1.5m (unidade):</span>
+                                        <span class="font-bold">R$ 520,00</span>
+                                    </div>
+                                    <div class="border-t pt-2 mt-2">
+                                        <div class="flex justify-between text-lg">
+                                            <span class="font-bold">Combo (AR-80 + 10 hastes):</span>
+                                            <span class="font-bold text-green-600">R$ 50.200,00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-brand-blue text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors">
+                                Solicitar Orçamento AR-80
+                            </button>
+                        </div>
+                        <div class="bg-gray-100 flex items-center justify-center p-8">
+                            <img src="imagem maquina AR_80 40m.jpeg" alt="Perfuratriz AR-80" class="max-w-full h-auto rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AR-60 (60m) -->
+            <div class="mb-16">
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden hover-lift shine-effect">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="bg-gray-100 flex items-center justify-center p-8 lg:order-1">
+                            <img src="maquinas AR60 60m.jpeg" alt="Perfuratriz AR-60" class="max-w-full h-auto rounded-lg shadow-lg">
+                        </div>
+                        <div class="p-8 lg:p-12 lg:order-2">
+                            <div class="flex items-center mb-6">
+                                <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-bold mr-4">MODELO AR-60</span>
+                                <span class="text-2xl font-bold text-brand-blue">60 Metros</span>
+                            </div>
+                            <h4 class="text-3xl font-bold text-brand-blue mb-4">Perfuratriz AR-60</h4>
+                            <p class="text-gray-600 mb-6 text-lg">
+                                Nossa perfuratriz mais robusta com capacidade para 60 metros de profundidade. 
+                                Perfeita para projetos de grande porte com carretinha inclusa.
+                            </p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Motor Zmax a gasolina de alta potência</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Torre de 3.5m com suporte para hastes de 2m</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Carretinha com 1 eixo e suspensão</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Painel completo com manômetros</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Funciona com bomba de lama ou compressor</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg mb-6 border-l-4 border-yellow-500">
+                                <div class="flex items-center mb-3">
+                                    <i class="fas fa-star text-yellow-500 mr-2"></i>
+                                    <h5 class="font-bold text-brand-blue">COMBO ESPECIAL - MELHOR OFERTA!</h5>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span>Equipamento AR-60:</span>
+                                        <span class="font-bold">R$ 65.000,00</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm text-gray-600">
+                                        <span>Valor separado (AR-60 + 15 hastes):</span>
+                                        <span class="line-through">R$ 74.300,00</span>
+                                    </div>
+                                    <div class="border-t pt-2 mt-2">
+                                        <div class="flex justify-between text-xl">
+                                            <span class="font-bold">COMBO (AR-60 + 15 hastes + 2 brocas):</span>
+                                            <span class="font-bold text-green-600">R$ 70.000,00</span>
+                                        </div>
+                                        <p class="text-sm text-green-600 font-medium mt-1">Economia de R$ 4.300,00!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-yellow-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-colors">
+                                Solicitar Combo AR-60
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Condições de Pagamento -->
+    <section class="py-16 bg-brand-blue text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Condições de Pagamento</h3>
+                <p class="text-xl">Facilitamos sua aquisição com condições flexíveis</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-money-bill-wave text-3xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Entrada Obrigatória</h4>
+                        <p class="text-sm">Mínimo de 30% para firmar o compromisso de compra</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-credit-card text-3xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Parcelamento</h4>
+                        <p class="text-sm">Até 6x no boleto com entrada obrigatória</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-shipping-fast text-3xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">Liberação Rápida</h4>
+                        <p class="text-sm">Equipamento liberado com 70% do pagamento total</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                    <div class="text-center">
+                        <i class="fas fa-handshake text-3xl text-yellow-400 mb-4"></i>
+                        <h4 class="text-xl font-bold mb-2">À Vista</h4>
+                        <p class="text-sm">Pagamento antecipado ou na entrega</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+                <h4 class="text-2xl font-bold mb-6 text-center">Exemplos de Parcelamento</h4>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h5 class="text-xl font-bold mb-4 text-yellow-400">AR-80 (Combo R$ 50.200)</h5>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Entrada (30%):</span>
+                                <span class="font-bold">R$ 15.060,00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>6x no boleto:</span>
+                                <span class="font-bold">R$ 5.856,66</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="text-xl font-bold mb-4 text-yellow-400">AR-60 (Combo R$ 70.000)</h5>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span>Entrada (30%):</span>
+                                <span class="font-bold">R$ 21.000,00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>6x no boleto:</span>
+                                <span class="font-bold">R$ 8.166,66</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Entre em Contato</h3>
+                <p class="text-lg text-gray-600">Solicite seu orçamento ou tire suas dúvidas conosco</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h4 class="text-2xl font-bold text-brand-blue mb-6">Informações de Contato</h4>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-brand-blue text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-brand-blue">Endereço</h5>
+                                    <p class="text-gray-600">R X 13 SN QUADRA 12 LOTE<br>
+                                    Bairro American Park<br>
+                                    Aparecida de Goiânia - GO<br>
+                                    CEP: 74953-140</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-building text-brand-blue text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <h5 class="font-bold text-brand-blue">Empresa</h5>
+                                    <p class="text-gray-600">L E TORNEADORA LTDA - ME<br>
+                                    CNPJ: 44.492.124/0001-07<br>
+                                    Fundada em: 06/12/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-brand-blue text-white p-8 rounded-lg">
+                        <h4 class="text-2xl font-bold mb-6">Solicite seu Orçamento</h4>
+                        <p class="mb-6">Entre em contato conosco para receber uma proposta personalizada para suas necessidades.</p>
+                        
+                        <div class="space-y-4">
+                            <a href="tel:62986018386" class="flex items-center bg-white/10 hover:bg-white/20 p-4 rounded-lg transition-colors">
+                                <i class="fas fa-phone text-yellow-400 text-xl mr-4"></i>
+                                <div>
+                                    <h5 class="font-bold">Telefone</h5>
+                                    <p class="text-sm">Clique para ligar</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/62986018386" class="flex items-center bg-green-600 hover:bg-green-700 p-4 rounded-lg transition-colors">
+                                <i class="fab fa-whatsapp text-white text-xl mr-4"></i>
+                                <div>
+                                    <h5 class="font-bold">WhatsApp</h5>
+                                    <p class="text-sm">Fale conosco agora</p>
+                                </div>
+                            </a>
+                            
+                            <a href="mailto:" class="flex items-center bg-white/10 hover:bg-white/20 p-4 rounded-lg transition-colors">
+                                <i class="fas fa-envelope text-yellow-400 text-xl mr-4"></i>
+                                <div>
+                                    <h5 class="font-bold">E-mail</h5>
+                                    <p class="text-sm">Envie sua mensagem</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <img src="logo.png" alt="L&E Torneadora" class="h-10 w-10">
+                    <div>
+                        <h5 class="font-bold">L&E TORNEADORA</h5>
+                        <p class="text-sm text-gray-300">Perfuratrizes Profissionais</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm text-gray-300">© 2025 L&E Torneadora. Todos os direitos reservados.</p>
+                    <p class="text-sm text-gray-300">CNPJ: 44.492.124/0001-07</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const menuIcon = document.querySelector('#mobile-menu-btn i');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                const menuIcon = this.querySelector('i');
+                
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.product-card, .bg-white\\/10');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-lg');
+            } else {
+                header.classList.remove('backdrop-blur-lg');
+            }
+        });
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.remove('image-loading');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img').forEach(img => {
+                img.classList.add('image-loading');
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+</body>
+</html>
